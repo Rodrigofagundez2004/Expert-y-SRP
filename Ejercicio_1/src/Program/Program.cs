@@ -1,17 +1,26 @@
 ﻿using System;
+using infolibreria;
+using Ucu.Poo.Expert;
 
-namespace Ucu.Poo.Expert
+namespace Program
 {
-
     class Program
     {
         static void Main()
         {
-            Book book1 = new Book("Design Patterns","Erich Gamma & Others","001-034");
-            Book book2 = new Book("Pro C#","Troelsen","001-035");
-            book1.ShelveBook("A","7");
-            book2.ShelveBook("B","3");
+            // Crear objeto Book
+            Book book = new Book("The Great Gatsby", "F. Scott Fitzgerald", "ABC123");
 
+            // Crear objeto InfoLibreria
+            infolibreria.Infolibreria libraryInfo = new infolibreria.Infolibreria("A", "7");
+
+            // Imprimir información del libro y la biblioteca
+            Console.WriteLine($"Book Information:");
+            Console.WriteLine($"Title: {book.Title}");
+            Console.WriteLine($"Author: {book.Author}");
+            Console.WriteLine($"Code: {book.Code}");
+            Console.WriteLine();
+            libraryInfo.PrintInfo();
         }
     }
 }
